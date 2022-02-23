@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="en" style="width: 100%; height: 100%;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title> Document</title>
+</head>
+ <body style="height:100%;width: 100%; display: flex;justify-content: center;align-items: center; overflow: hidden; background-color:black;">
+ <div style="width:100px;height:100px;border-radius: 50%; background:linear-gradient(rgb(162, 0, 255) 20%, red 40%, rgb(238, 255, 0) 60%, cyan 80%, green 100%);
+             background-attachment: fixed;position: absolute; top: 0px;left: 0px; transition: all;transition-duration: 4s;"
+    id="a">
+</div> 
+<div style="width:100px;height:100px;border-radius: 50%; background:linear-gradient(rgb(162, 0, 255) 20%, red 40%,  rgb(238, 255, 0) 60%, cyan 80%, green 100%);
+             background-attachment: fixed;position: absolute; top: 0px;left: 0px; transition: all;transition-duration: 4s;"
+    id="b">
+</div>
+<div style="width:100px;height:100px;border-radius: 50%; background:linear-gradient(rgb(162, 0, 255) 20%, red 40%,  rgb(238, 255, 0) 60%, cyan 80%, green 100%);
+             background-attachment: fixed;position: absolute; top: 0px;left: 0px; transition: all;transition-duration: 4s;"
+    id="c">
+</div>
+<div style="font-size: 97px;font-weight: 700; color: white; ">
+    What is your opinion ?
+</div> 
+</body>
+ <script>
+  const amover = document.getElementById("a");
+  const bmover = document.getElementById("b");
+  const cmover = document.getElementById("c");
+ function hov(){
+    var xmoving = [((Math.random() / 1) * 100) + "%", ((Math.random() / 1) * 100) + "%", ((Math.random() / 1) * 100) + "%"];
+    var ymoving = [((Math.random() / 1) * 100) + "%", ((Math.random() / 1) * 100) + "%", ((Math.random() / 1) * 100) + "%"];
+    var shape   = [((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "%",
+                   ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "%",
+                   ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "% " + ((Math.random() / 1) * 100) + "%"];
+    [amover.style.top, bmover.style.top, cmover.style.top]    = xmoving;
+    [amover.style.left, bmover.style.left, cmover.style.left] = ymoving;
+    [amover.style.borderRadius, bmover.style.borderRadius, cmover.style.borderRadius] = shape;
+}
+ setInterval (hov, 2000);
+ </script>
+</html> 
